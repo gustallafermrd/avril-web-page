@@ -7,16 +7,22 @@
 
 <h1>test title</h1>
 
-<?php 
-    ini_set( 'display_errors', 1 );
-    error_reporting( E_ALL );
-    $from = "gustallafer@gmail.com";
-    $to = "gustavo.tallaferro@avril-assistance.com";
-    $subject = "Mail Test script";
-    $message = "This is a test to check the PHP Mail functionality";
-    $headers = "From:" . $from;
-    mail($to,$subject,$message, $headers);
-    echo "E-mail enviado con  éxito";
+<?PHP
+$sender = 'gustavo.tallaferro@avril-assistance.com';
+$recipient = 'gustallafer@gmail.com';
+
+$subject = "php mail test";
+$message = "php test message";
+$headers = 'From:' . $sender;
+
+if (mail($recipient, $subject, $message, $headers))
+{
+    echo "Mensaje enviado";
+}
+else
+{
+    echo "Error: mensaje no enviado";
+}
 ?>
 
 </body>
