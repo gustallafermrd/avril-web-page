@@ -7,23 +7,9 @@
 
 <h1>test title</h1>
 
-<?PHP
-$sender = 'gustavo.tallaferro@avril-assistance.com';
-$recipient = 'gustallafer@gmail.com';
-
-$subject = "php mail test";
-$message = "php test message";
-$headers = 'From:' . $sender;
-
-if (mail($recipient, $subject, $message, $headers))
-{
-    echo "Mensaje enviado";
-}
-else
-{
-    echo "Error: mensaje no enviado";
-}
-?>
+<form action="mail2.php" method="POST">
+	
+</form>
 
 </body>
 </html>
